@@ -31,7 +31,7 @@ function buildTable(data) {
       if (date) {
           filteredData = filteredData.filter(row => row.datetime === date);
       }
-      buildTable(filtereData);
+      buildTable(filteredData);
   };
 
   d3.selectAll("#filter-btn").on("click", handleClick);
