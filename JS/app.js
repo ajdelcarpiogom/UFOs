@@ -23,3 +23,17 @@ function buildTable(data) {
       );
     });
   }
+
+  function handleClick() {
+      let date = d3.select("#datetime").property("value");
+      let filteredData = tableData;
+      // if-statement syntax
+      if (date) {
+          filteredData = filteredData.filter(row => row.datetime === date);
+      }
+      buildTable(filtereData);
+  };
+
+  d3.selectAll("#filter-btn").on("click", handleClick);
+
+  buildTable(tableData);
